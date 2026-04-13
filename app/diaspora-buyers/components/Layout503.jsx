@@ -16,8 +16,8 @@ export function Layout503() {
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Money</p>
-            <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Money</p>
+            <h1 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               How to pay
             </h1>
             <p className="md:text-md">
@@ -66,8 +66,8 @@ export function Layout503() {
           >
             <div className="grid grid-cols-1 border border-border-primary md:grid-cols-2 md:items-center">
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Wire</p>
-                <h2 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                <p className="eyebrow mb-3 md:mb-4">Wire</p>
+                <h2 className="mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                   International bank transfer
                 </h2>
                 <p>
@@ -104,8 +104,8 @@ export function Layout503() {
           >
             <div className="grid grid-cols-1 border border-border-primary md:grid-cols-2 md:items-center">
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Wire</p>
-                <h2 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                <p className="eyebrow mb-3 md:mb-4">Wire</p>
+                <h2 className="mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                   International bank transfer
                 </h2>
                 <p>
@@ -142,8 +142,8 @@ export function Layout503() {
           >
             <div className="grid grid-cols-1 border border-border-primary md:grid-cols-2 md:items-center">
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Wire</p>
-                <h2 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                <p className="eyebrow mb-3 md:mb-4">Wire</p>
+                <h2 className="mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                   International bank transfer
                 </h2>
                 <p>

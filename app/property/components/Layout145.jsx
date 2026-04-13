@@ -22,8 +22,8 @@ export function Layout145() {
       <div className="container">
         <ScrollReveal variant="fadeUp" className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto flex max-w-lg flex-col items-center text-center">
-            <p className="mb-3 font-semibold md:mb-4">Gallery</p>
-            <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Gallery</p>
+            <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               See every angle
             </h2>
             <p className="md:text-md">

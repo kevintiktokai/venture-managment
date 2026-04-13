@@ -11,12 +11,12 @@ export function Layout370() {
       <div className="container">
         <ScrollReveal variant="fadeUp" className="rb-12 mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Process</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Process</p>
+            <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl" style={{ color: "var(--text-primary)" }}>
               Three steps to ownership
             </h2>
-            <p className="md:text-md">
-              Whether you're local or diaspora, we make it simple and secure
+            <p className="md:text-md" style={{ color: "var(--text-secondary)" }}>
+              Whether you&apos;re local or diaspora, we make it simple and secure
             </p>
           </div>
         </ScrollReveal>
@@ -34,8 +34,8 @@ export function Layout370() {
               </div>
               <div className="flex flex-col justify-center p-6">
                 <div>
-                  <p className="mb-2 text-sm font-semibold">One</p>
-                  <h3 className="mb-2 text-xl font-bold md:text-2xl">
+                  <p className="eyebrow mb-2">One</p>
+                  <h3 className="mb-2 text-xl font-medium md:text-2xl">
                     Connect with us
                   </h3>
                   <p>WhatsApp, phone, or book a viewing in person</p>
@@ -65,8 +65,8 @@ export function Layout370() {
               </div>
               <div className="flex flex-col justify-center p-6">
                 <div>
-                  <p className="mb-2 text-sm font-semibold">Two</p>
-                  <h3 className="mb-2 text-xl font-bold md:text-2xl">
+                  <p className="eyebrow mb-2">Two</p>
+                  <h3 className="mb-2 text-xl font-medium md:text-2xl">
                     View &amp; verify
                   </h3>
                   <p>Tour properties and review verified title deed documentation</p>
@@ -83,25 +83,26 @@ export function Layout370() {
               </div>
             </div>
             {/* Step 3 */}
-            <div className="grid grid-cols-1 sm:col-span-2 sm:row-span-1 sm:grid-cols-2 overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
-              <div className="flex items-center justify-center overflow-hidden">
+            <div className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1"
+              style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
+              <div className="flex items-center justify-center overflow-hidden" style={{ height: "200px" }}>
                 <img
                   src="/images/property-featured.jpg"
                   alt="Close with confidence"
-                  className="size-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="flex flex-1 flex-col justify-center p-6">
+              <div className="flex flex-col justify-center p-6">
                 <div>
-                  <p className="mb-2 text-sm font-semibold">Three</p>
-                  <h3 className="mb-2 text-xl font-bold md:text-2xl">
+                  <p className="eyebrow mb-2">Three</p>
+                  <h3 className="mb-2 text-xl font-medium md:text-2xl">
                     Close with confidence
                   </h3>
                   <p>
                     Legal support and clear next steps every step of the way
                   </p>
                 </div>
-                <div className="mt-5 flex flex-wrap items-center gap-4 md:mt-6">
+                <div className="mt-5 flex items-center gap-4 md:mt-6">
                   <Link
                     href="/about-us#contact"
                     className="flex items-center gap-1 text-sm font-medium transition-colors"

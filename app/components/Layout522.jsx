@@ -6,125 +6,101 @@ import { RxChevronRight } from "react-icons/rx";
 import { BiSolidShieldAlt2, BiDollar, BiSolidBolt } from "react-icons/bi";
 import { ScrollReveal, StaggerReveal } from "./ScrollReveal";
 
+const cards = [
+  {
+    icon: BiSolidShieldAlt2,
+    label: "Listings",
+    title: "Title deed verification process",
+    desc: "We inspect documents and confirm ownership before any listing goes live",
+    img: "/images/suburb-borrowdale.jpg",
+    imgAlt: "Borrowdale neighborhood in Harare",
+    link: { href: "/about-us", label: "Learn more" },
+  },
+  {
+    icon: BiDollar,
+    label: "Currency",
+    title: "Currency clarity for all buyers",
+    desc: "USD and local currency pricing shown side by side always",
+    img: "/images/suburb-highlands.jpg",
+    imgAlt: "Highlands suburb in Harare",
+    link: { href: "/properties", label: "Browse listings" },
+  },
+  {
+    icon: BiSolidBolt,
+    label: "Infrastructure",
+    title: "Infrastructure you can count on",
+    desc: "Borehole, solar, and security details listed for every property",
+    img: "/images/hero-properties.jpg",
+    imgAlt: "Modern property in Harare",
+    link: { href: "/suburb-guide", label: "Suburb guide" },
+  },
+];
+
 export function Layout522() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <ScrollReveal variant="fadeUp" className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Verified</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Verified</p>
+            <h2
+              className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl"
+              style={{ color: "var(--text-primary)" }}
+            >
               How we work
             </h2>
-            <p className="md:text-md">
+            <p className="md:text-md" style={{ color: "var(--text-secondary)" }}>
               Every listing checked for title deed authenticity and legal
               standing
             </p>
           </div>
         </ScrollReveal>
-        <StaggerReveal className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4" stagger={0.12}>
-          {/* Main card */}
-          <div className="relative p-6 sm:col-span-2 md:p-8 lg:p-12 overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)" }}>
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-black/50 z-10" />
-              <img
-                src="/images/suburb-borrowdale.jpg"
-                className="size-full object-cover"
-                alt="Borrowdale neighborhood in Harare"
-              />
-            </div>
-            <div className="relative z-10">
-              <p className="mb-2 inline-block text-sm font-semibold text-text-alternative">
-                Listings
-              </p>
-              <h3 className="mb-5 text-4xl font-bold leading-[1.2] text-text-alternative md:mb-6 md:text-5xl lg:text-6xl">
-                Title deed verification process
-              </h3>
-              <p className="text-text-alternative">
-                We inspect documents and confirm ownership before any listing
-                goes live
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                <Link
-                  href="/about-us"
-                  className="inline-block px-5 py-2.5 text-xs font-medium uppercase tracking-widest transition-all hover:-translate-y-0.5"
-                  style={{
-                    border: "1px solid rgba(255,255,255,0.5)",
-                    color: "var(--color-ivory)",
-                    borderRadius: "var(--radius-btn)",
-                  }}
-                >
-                  Learn more
-                </Link>
-                <Link
-                  href="/properties"
-                  className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
-                >
-                  View listings <RxChevronRight />
-                </Link>
+        <StaggerReveal
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3"
+          stagger={0.12}
+        >
+          {cards.map(({ icon: Icon, label, title, desc, img, imgAlt, link }) => (
+            <div
+              key={title}
+              className="relative flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1"
+              style={{
+                borderRadius: "var(--radius-card)",
+                boxShadow: "var(--shadow-card)",
+                minHeight: "380px",
+              }}
+            >
+              {/* Background image */}
+              <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/75 via-black/50 to-black/30" />
+                <img src={img} className="size-full object-cover" alt={imgAlt} />
               </div>
-            </div>
-          </div>
-          {/* Currency card */}
-          <div className="relative flex flex-col p-6 md:p-8 lg:p-6 overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)" }}>
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-black/50 z-10" />
-              <img
-                src="/images/suburb-highlands.jpg"
-                className="size-full object-cover"
-                alt="Highlands suburb in Harare"
-              />
-            </div>
-            <div className="relative z-10 flex flex-1 flex-col justify-between">
-              <div className="mb-3 md:mb-4">
-                <BiDollar className="size-12 text-text-alternative" />
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-text-alternative md:text-2xl">
-                Currency clarity for all buyers
-              </h3>
-              <p className="text-text-alternative">
-                USD and local currency pricing shown side by side always
-              </p>
-              <div className="mt-5 flex items-center md:mt-6">
-                <Link
-                  href="/properties"
-                  className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
+              {/* Content */}
+              <div className="relative z-10 flex flex-1 flex-col justify-end p-6 md:p-8">
+                <div className="mb-4">
+                  <Icon className="size-10 text-white/80" />
+                </div>
+                <p className="eyebrow mb-2" style={{ color: "rgba(237,215,192,0.7)" }}>
+                  {label}
+                </p>
+                <h3
+                  className="mb-3 text-2xl font-medium leading-tight md:text-3xl"
+                  style={{ fontFamily: "var(--font-display)", color: "var(--color-ivory)" }}
                 >
-                  Browse listings <RxChevronRight />
+                  {title}
+                </h3>
+                <p className="mb-5 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
+                  {desc}
+                </p>
+                <Link
+                  href={link.href}
+                  className="flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-80"
+                  style={{ color: "var(--color-gold)" }}
+                >
+                  {link.label} <RxChevronRight />
                 </Link>
               </div>
             </div>
-          </div>
-          {/* Infrastructure card */}
-          <div className="relative flex flex-col p-6 md:p-8 lg:p-6 overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)" }}>
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-black/50 z-10" />
-              <img
-                src="/images/hero-properties.jpg"
-                className="size-full object-cover"
-                alt="Modern property in Harare"
-              />
-            </div>
-            <div className="relative z-10 flex flex-1 flex-col justify-between">
-              <div className="mb-3 md:mb-4">
-                <BiSolidBolt className="size-12 text-text-alternative" />
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-text-alternative md:text-2xl">
-                Infrastructure you can count on
-              </h3>
-              <p className="text-text-alternative">
-                Borehole, solar, and security details listed for every property
-              </p>
-              <div className="mt-5 flex items-center md:mt-6">
-                <Link
-                  href="/suburb-guide"
-                  className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
-                >
-                  Suburb guide <RxChevronRight />
-                </Link>
-              </div>
-            </div>
-          </div>
+          ))}
         </StaggerReveal>
       </div>
     </section>

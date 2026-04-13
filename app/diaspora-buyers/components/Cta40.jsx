@@ -9,7 +9,7 @@ export function Cta40() {
       <div className="container">
         <div className="grid auto-cols-fr grid-cols-1 border border-border-primary lg:grid-cols-2">
           <div className="flex flex-col justify-center p-8 md:p-12">
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Get your property wishlist
             </h2>
             <p className="md:text-md">

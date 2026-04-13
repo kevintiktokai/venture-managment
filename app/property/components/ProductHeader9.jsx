@@ -73,7 +73,7 @@ export function ProductHeader9() {
                 </Fragment>
               </BreadcrumbList>
             </Breadcrumb>
-            <h1 className="mb-3 text-4xl font-bold leading-[1.2] md:mb-4 md:text-5xl lg:text-6xl">
+            <h1 className="mb-3 text-4xl font-light leading-[1.2] md:mb-4 md:text-5xl lg:text-6xl">
               Modern home in Borrowdale
             </h1>
             <p className="md:text-md">Borrowdale, Harare</p>

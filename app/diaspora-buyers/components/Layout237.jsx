@@ -10,8 +10,8 @@ export function Layout237() {
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="rb-12 mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-            <p className="mb-3 font-semibold md:mb-4">Simplified</p>
-            <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Simplified</p>
+            <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Three ways we make it work for you
             </h2>
             <p className="md:text-md">

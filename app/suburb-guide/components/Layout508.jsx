@@ -15,8 +15,8 @@ export function Layout508() {
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">Explore</p>
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <p className="eyebrow mb-3 md:mb-4">Explore</p>
+          <h1 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
             Five suburbs, one vision
           </h1>
           <p className="md:text-md">
@@ -77,10 +77,10 @@ export function Layout508() {
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
+                  <p className="eyebrow mb-3 md:mb-4">
                     Premium and established
                   </p>
-                  <h2 className="rb-5 mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                  <h2 className="rb-5 mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                     Tree-lined streets, top schools, consistent water and power.
                     The choice for families and long-term investors seeking
                     stability and prestige.
@@ -115,10 +115,10 @@ export function Layout508() {
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
+                  <p className="eyebrow mb-3 md:mb-4">
                     Premium and established
                   </p>
-                  <h2 className="rb-5 mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                  <h2 className="rb-5 mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                     Tree-lined streets, top schools, consistent water and power.
                     The choice for families and long-term investors seeking
                     stability and prestige.
@@ -153,10 +153,10 @@ export function Layout508() {
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
+                  <p className="eyebrow mb-3 md:mb-4">
                     Premium and established
                   </p>
-                  <h2 className="rb-5 mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                  <h2 className="rb-5 mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                     Tree-lined streets, top schools, consistent water and power.
                     The choice for families and long-term investors seeking
                     stability and prestige.
@@ -191,10 +191,10 @@ export function Layout508() {
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
+                  <p className="eyebrow mb-3 md:mb-4">
                     Premium and established
                   </p>
-                  <h2 className="rb-5 mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                  <h2 className="rb-5 mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                     Tree-lined streets, top schools, consistent water and power.
                     The choice for families and long-term investors seeking
                     stability and prestige.
@@ -229,10 +229,10 @@ export function Layout508() {
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
+                  <p className="eyebrow mb-3 md:mb-4">
                     Premium and established
                   </p>
-                  <h2 className="rb-5 mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                  <h2 className="rb-5 mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                     Tree-lined streets, top schools, consistent water and power.
                     The choice for families and long-term investors seeking
                     stability and prestige.
@@ -267,10 +267,10 @@ export function Layout508() {
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
+                  <p className="eyebrow mb-3 md:mb-4">
                     Premium and established
                   </p>
-                  <h2 className="rb-5 mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                  <h2 className="rb-5 mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                     Tree-lined streets, top schools, consistent water and power.
                     The choice for families and long-term investors seeking
                     stability and prestige.

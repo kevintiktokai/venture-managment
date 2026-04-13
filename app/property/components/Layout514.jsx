@@ -158,8 +158,8 @@ export function Layout514() {
           </div>
           <div className="flex flex-col gap-y-16 md:sticky md:top-20 md:h-[calc(100vh_-10rem)] md:justify-center">
             <div className="flex flex-col">
-              <p className="mb-3 font-semibold md:mb-4">Neighbourhood</p>
-              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              <p className="eyebrow mb-3 md:mb-4">Neighbourhood</p>
+              <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
                 What the area offers
               </h2>
               <p className="md:text-md">

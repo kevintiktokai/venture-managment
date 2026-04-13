@@ -69,8 +69,8 @@ export function Layout348() {
           <div className="grid grid-cols-1 gap-12 md:block">
             <div>
               <div className="flex flex-col items-start justify-center md:h-screen">
-                <p className="mb-3 font-semibold md:mb-4">Diaspora</p>
-                <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                <p className="eyebrow mb-3 md:mb-4">Diaspora</p>
+                <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
                   Buying from abroad made simple
                 </h2>
                 <p className="md:text-md">
@@ -102,8 +102,8 @@ export function Layout348() {
             </div>
             <div>
               <div className="flex flex-col items-start justify-center md:h-screen">
-                <p className="mb-3 font-semibold md:mb-4">Diaspora</p>
-                <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                <p className="eyebrow mb-3 md:mb-4">Diaspora</p>
+                <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
                   Buying from abroad made simple
                 </h2>
                 <p className="md:text-md">
@@ -135,8 +135,8 @@ export function Layout348() {
             </div>
             <div>
               <div className="flex flex-col items-start justify-center md:h-screen">
-                <p className="mb-3 font-semibold md:mb-4">Diaspora</p>
-                <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                <p className="eyebrow mb-3 md:mb-4">Diaspora</p>
+                <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
                   Buying from abroad made simple
                 </h2>
                 <p className="md:text-md">
@@ -168,8 +168,8 @@ export function Layout348() {
             </div>
             <div>
               <div className="flex flex-col items-start justify-center md:h-screen">
-                <p className="mb-3 font-semibold md:mb-4">Diaspora</p>
-                <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                <p className="eyebrow mb-3 md:mb-4">Diaspora</p>
+                <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
                   Buying from abroad made simple
                 </h2>
                 <p className="md:text-md">

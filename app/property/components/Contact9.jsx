@@ -16,8 +16,8 @@ export function Contact9() {
         </div>
         <div>
           <div className="mb-6 md:mb-8">
-            <p className="mb-3 font-semibold md:mb-4">Ready?</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Ready?</p>
+            <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Get in touch
             </h2>
             <p className="md:text-md">

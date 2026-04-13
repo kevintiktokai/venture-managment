@@ -17,6 +17,13 @@
   --color-terracotta:  #305568;   /* reuse primary for CTAs              */
   --color-gold:        #EDD7C0;   /* cream used as highlight             */
 
+  /* ─── Premium Text Colors ─── */
+  --text-primary:      #1a1a1a;    /* near-black for headlines          */
+  --text-secondary:    #3d3d3d;    /* dark gray for body text           */
+  --text-muted:        #6b6b6b;    /* medium gray for captions/meta     */
+  --text-accent:       #305568;    /* forest for labels & highlights    */
+  --text-soft:         #8a7a6e;    /* warm gray for subtitles           */
+
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
@@ -43,6 +50,12 @@
   --color-forest-mid:  #7bbcd8;
   --color-gold:        #c4a882;
 
+  --text-primary:      #f0ece8;
+  --text-secondary:    #c8c0b8;
+  --text-muted:        #8a8078;
+  --text-accent:       #5a9abf;
+  --text-soft:         #7a7068;
+
   --shadow-card:       0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15);
   --shadow-card-hover: 0 12px 32px rgba(0,0,0,0.35), 0 4px 12px rgba(0,0,0,0.2);
   --shadow-btn:        0 2px 6px rgba(0,0,0,0.2);
@@ -54,7 +67,7 @@
 
 .dark body {
   background-color: #111;
-  color: #f0ece8;
+  color: var(--text-secondary);
 }
 
 .dark section {
@@ -73,19 +86,40 @@ html {
 body {
   font-family: var(--font-body);
   background-color: #faf7f4;
-  color: var(--color-charcoal);
+  color: var(--text-secondary);
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
 }
 
-/* ─── Typography Scale ───────────────────────────────────────── */
+/* ─── Premium Typography Scale ──────────────────────────────── */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
 }
 
-h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 400; line-height: 1.05; }
-h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; line-height: 1.1;  }
-h3 { font-size: clamp(1.5rem, 2.5vw, 2.25rem); font-weight: 500; }
+h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 300; }
+h2 { font-size: clamp(2.2rem, 5vw, 4rem);   font-weight: 300; }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; letter-spacing: -0.01em; }
+h4 { font-size: clamp(1.1rem, 1.8vw, 1.5rem); font-weight: 500; letter-spacing: 0; }
+
+/* Body text */
+p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* ─── Premium Eyebrow / Label ───────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
 
 /* ─── Grain Texture Overlay ──────────────────────────────────── */
 body::before {
@@ -118,7 +152,7 @@ section h1,
 section h2,
 section h3 {
   font-family: var(--font-display) !important;
-  color: var(--color-charcoal);
+  color: var(--text-primary);
 }
 
 /* Buttons — primary (Relume override) */
@@ -224,6 +258,55 @@ a {
 
 a:hover {
   color: var(--color-terracotta);
+}
+
+/* ─── Ambient Background Orbs ────────────────────────────────── */
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(40px, -60px) scale(1.08); }
+  66%      { transform: translate(-30px, 30px) scale(0.95); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(-50px, 40px) scale(1.05); }
+  66%      { transform: translate(35px, -45px) scale(0.92); }
+}
+
+.ambient-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.06;
+  z-index: -1;
+}
+
+.ambient-orb-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-forest);
+  top: 10%;
+  right: -10%;
+  animation: orbFloat1 25s ease-in-out infinite;
+}
+
+.ambient-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-warm-gray);
+  bottom: 15%;
+  left: -8%;
+  animation: orbFloat2 30s ease-in-out infinite;
+}
+
+.ambient-orb-3 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-forest-mid);
+  top: 50%;
+  left: 40%;
+  animation: orbFloat1 35s ease-in-out infinite reverse;
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────────── */

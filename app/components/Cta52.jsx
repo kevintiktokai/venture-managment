@@ -9,7 +9,7 @@ export function Cta52() {
       <div className="container">
         <div className="flex flex-col items-center border border-border-primary p-8 md:p-12 lg:p-16">
           <div className="max-w-lg text-center">
-            <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Stay ahead of the market
             </h2>
             <p className="md:text-md">

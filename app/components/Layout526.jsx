@@ -73,8 +73,8 @@ export function Layout526() {
       <div className="container">
         <ScrollReveal variant="fadeUp" className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Suburbs</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Suburbs</p>
+            <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Where to buy in Harare
             </h2>
             <p className="md:text-md">

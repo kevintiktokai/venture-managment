@@ -49,7 +49,7 @@ export function Testimonial42() {
       <div className="container">
         <div className="grid auto-cols-fr grid-cols-1 items-center gap-12 md:gap-16 lg:grid-cols-2 lg:gap-20">
           <div className="w-full max-w-md lg:mb-24">
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Real voices
             </h2>
             <p className="md:text-md">What residents say</p>

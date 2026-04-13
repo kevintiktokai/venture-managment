@@ -49,7 +49,7 @@ export function Gallery22() {
     >
       <div className="container">
         <div className="rb-12 mb-12 md:mb-18 lg:mb-20">
-          <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
             Harare's neighbourhoods
           </h2>
           <p className="md:text-md">

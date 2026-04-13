@@ -16,8 +16,8 @@ export function Layout504_1() {
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Modern</p>
-            <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Modern</p>
+            <h1 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Mt Pleasant, built for now
             </h1>
             <p className="md:text-md">
@@ -74,8 +74,8 @@ export function Layout504_1() {
                 />
               </div>
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Appeal</p>
-                <h2 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                <p className="eyebrow mb-3 md:mb-4">Appeal</p>
+                <h2 className="mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                   Newer builds with modern finishes and open-plan living
                 </h2>
                 <p>
@@ -112,8 +112,8 @@ export function Layout504_1() {
                 />
               </div>
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Appeal</p>
-                <h2 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                <p className="eyebrow mb-3 md:mb-4">Appeal</p>
+                <h2 className="mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                   Newer builds with modern finishes and open-plan living
                 </h2>
                 <p>
@@ -150,8 +150,8 @@ export function Layout504_1() {
                 />
               </div>
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Appeal</p>
-                <h2 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+                <p className="eyebrow mb-3 md:mb-4">Appeal</p>
+                <h2 className="mb-5 text-4xl font-light leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
                   Newer builds with modern finishes and open-plan living
                 </h2>
                 <p>

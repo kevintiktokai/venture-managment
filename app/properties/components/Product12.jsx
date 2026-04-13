@@ -168,8 +168,8 @@ export function Product12() {
         <div className="container">
           <div className="grid grid-cols-1 items-end gap-6 md:grid-cols-[1fr_max-content]">
             <div className="max-w-lg">
-              <p className="mb-3 font-semibold md:mb-4">For Sale</p>
-              <h2 className="mb-3 text-5xl font-bold md:mb-4 md:text-7xl lg:text-8xl">
+              <p className="eyebrow mb-3 md:mb-4">For Sale</p>
+              <h2 className="mb-3 text-5xl font-light md:mb-4 md:text-7xl lg:text-8xl">
                 Featured listings
               </h2>
               <p className="md:text-md">

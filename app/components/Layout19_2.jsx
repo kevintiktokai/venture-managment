@@ -10,8 +10,8 @@ export function Layout19_2() {
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
-            <p className="mb-3 font-semibold md:mb-4">Diaspora</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Diaspora</p>
+            <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               Buying from abroad made simple
             </h2>
             <p className="mb-5 md:mb-6 md:text-md">

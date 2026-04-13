@@ -17,8 +17,8 @@ export function Layout207() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <p className="mb-3 font-semibold md:mb-4">Amenities</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <p className="eyebrow mb-3 md:mb-4">Amenities</p>
+            <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
               What comes with this home
             </h2>
             <p className="mb-5 md:mb-6 md:text-md">
