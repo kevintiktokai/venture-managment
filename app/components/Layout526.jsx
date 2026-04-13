@@ -226,7 +226,7 @@ export function Layout526() {
                     style={{
                       background: "var(--color-forest)",
                       color: "var(--color-ivory)",
-                      borderRadius: "2px",
+                      borderRadius: "var(--radius-btn)",
                     }}
                   >
                     Suburb guide
@@ -248,7 +248,7 @@ export function Layout526() {
                       onClick={() => setActive(s)}
                       className="px-3 py-1.5 text-xs font-medium uppercase tracking-wider transition-all"
                       style={{
-                        borderRadius: "2px",
+                        borderRadius: "var(--radius-btn)",
                         background: active.id === s.id ? "var(--color-forest)" : "transparent",
                         color: active.id === s.id ? "var(--color-ivory)" : "var(--color-charcoal)",
                         border: `1px solid ${active.id === s.id ? "var(--color-forest)" : "var(--color-warm-gray)"}`,

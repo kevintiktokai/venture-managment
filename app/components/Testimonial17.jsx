@@ -16,7 +16,8 @@ export function Testimonial17() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
+          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+            style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
             <div className="rb-5 mb-5 md:mb-6">
               <div className="mb-5 flex md:mb-6">
                 <BiSolidStar className="mr-1 size-6" />
@@ -43,7 +44,8 @@ export function Testimonial17() {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
+          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+            style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
             <div className="rb-5 mb-5 md:mb-6">
               <div className="mb-5 flex md:mb-6">
                 <BiSolidStar className="mr-1 size-6" />
@@ -70,7 +72,8 @@ export function Testimonial17() {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
+          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+            style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
             <div className="rb-5 mb-5 md:mb-6">
               <div className="mb-5 flex md:mb-6">
                 <BiSolidStar className="mr-1 size-6" />

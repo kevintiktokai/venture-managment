@@ -59,7 +59,7 @@ export function Footer12() {
                   style={{
                     background: "var(--color-forest)",
                     color: "var(--color-ivory)",
-                    borderRadius: "2px",
+                    borderRadius: "var(--radius-btn)",
                   }}
                 >
                   For Sale
@@ -70,7 +70,7 @@ export function Footer12() {
                   style={{
                     border: "1px solid rgba(237,215,192,0.3)",
                     color: "var(--color-ivory)",
-                    borderRadius: "2px",
+                    borderRadius: "var(--radius-btn)",
                   }}
                 >
                   For Rent

@@ -86,7 +86,7 @@ export function Lightbox({ images, startIndex = 0, onClose }) {
       {/* Counter */}
       <div
         className="absolute bottom-5 left-1/2 -translate-x-1/2 px-4 py-1.5 text-xs uppercase tracking-widest"
-        style={{ background: "rgba(255,255,255,0.1)", color: "#fff", borderRadius: "2px" }}
+        style={{ background: "rgba(255,255,255,0.1)", color: "#fff", borderRadius: "var(--radius-btn)" }}
       >
         {current + 1} / {images.length}
       </div>
@@ -102,7 +102,7 @@ export function Lightbox({ images, startIndex = 0, onClose }) {
               style={{
                 width: 48,
                 height: 36,
-                borderRadius: "2px",
+                borderRadius: "var(--radius-btn)",
                 opacity: i === current ? 1 : 0.45,
                 border: i === current ? "2px solid var(--color-gold)" : "2px solid transparent",
               }}

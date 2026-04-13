@@ -52,14 +52,18 @@ export function Faq14() {
         </div>
         <div className="container grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12 lg:gap-y-16">
           {faqs.map(({ icon: Icon, question, answer }) => (
-            <div key={question} className="flex w-full flex-col items-center text-center">
-              <div className="rb-5 mb-5 md:mb-6">
-                <Icon className="size-12" style={{ color: "var(--color-forest)" }} />
+            <div
+              key={question}
+              className="flex w-full flex-col items-center text-center p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+              style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}
+            >
+              <div className="rb-5 mb-5 md:mb-6 flex items-center justify-center size-14 rounded-full" style={{ background: "rgba(48,85,104,0.08)" }}>
+                <Icon className="size-7" style={{ color: "var(--color-forest)" }} />
               </div>
               <h3 className="mb-3 font-bold md:mb-4 md:text-md">
                 {question}
               </h3>
-              <p>{answer}</p>
+              <p className="text-sm leading-relaxed opacity-75">{answer}</p>
             </div>
           ))}
         </div>
@@ -79,7 +83,8 @@ export function Faq14() {
               style={{
                 border: "1px solid var(--color-forest)",
                 color: "var(--color-forest)",
-                borderRadius: "2px",
+                borderRadius: "var(--radius-btn)",
+                boxShadow: "var(--shadow-btn)",
               }}
             >
               Contact us

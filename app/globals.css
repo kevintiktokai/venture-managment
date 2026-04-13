@@ -20,6 +20,17 @@
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* ─── Card & Surface System ─── */
+  --radius-card:   14px;
+  --radius-btn:    8px;
+  --radius-badge:  6px;
+  --radius-input:  10px;
+
+  --shadow-card:       0 2px 8px rgba(43,36,32,0.06), 0 1px 3px rgba(43,36,32,0.04);
+  --shadow-card-hover: 0 12px 32px rgba(43,36,32,0.10), 0 4px 12px rgba(43,36,32,0.06);
+  --shadow-btn:        0 2px 6px rgba(43,36,32,0.08);
+  --shadow-btn-hover:  0 6px 16px rgba(43,36,32,0.12);
 }
 
 /* ─── Dark Mode Tokens ───────────────────────────────────────── */
@@ -31,6 +42,12 @@
   --color-forest:      #5a9abf;
   --color-forest-mid:  #7bbcd8;
   --color-gold:        #c4a882;
+
+  --shadow-card:       0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15);
+  --shadow-card-hover: 0 12px 32px rgba(0,0,0,0.35), 0 4px 12px rgba(0,0,0,0.2);
+  --shadow-btn:        0 2px 6px rgba(0,0,0,0.2);
+  --shadow-btn-hover:  0 6px 16px rgba(0,0,0,0.3);
+
   background-color: #111;
   color-scheme: dark;
 }
@@ -104,32 +121,64 @@ section h3 {
   color: var(--color-charcoal);
 }
 
-/* Buttons — primary */
+/* Buttons — primary (Relume override) */
 button[class*="bg-background-alternative"],
 a[class*="bg-background-alternative"],
 .bg-background-alternative {
   background-color: var(--color-forest) !important;
   color: var(--color-ivory) !important;
   border-color: var(--color-forest) !important;
-  border-radius: 2px !important;
+  border-radius: var(--radius-btn) !important;
   letter-spacing: 0.05em;
   font-weight: 500;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: var(--shadow-btn);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button[class*="bg-background-alternative"]:hover,
 a[class*="bg-background-alternative"]:hover {
   background-color: var(--color-forest-mid) !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-hover);
 }
 
-/* Buttons — secondary */
+button[class*="bg-background-alternative"]:active,
+a[class*="bg-background-alternative"]:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-btn);
+}
+
+/* Buttons — secondary (Relume override) */
 button[class*="border-border-primary"]:not([class*="bg-background-alternative"]),
 a[class*="border-border-primary"]:not([class*="bg-background-alternative"]) {
   border-color: var(--color-forest) !important;
   color: var(--color-forest) !important;
-  border-radius: 2px !important;
+  border-radius: var(--radius-btn) !important;
   background-color: transparent !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[class*="border-border-primary"]:not([class*="bg-background-alternative"]):hover,
+a[class*="border-border-primary"]:not([class*="bg-background-alternative"]):hover {
+  background-color: var(--color-forest) !important;
+  color: var(--color-ivory) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+/* ─── Unified Card Style ─────────────────────────────────────── */
+/* Relume border cards get the new treatment */
+[class*="border-border-primary"] {
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-card);
+  border-color: rgba(43,36,32,0.08) !important;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+[class*="border-border-primary"]:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
 }
 
 /* ─── Page Entrance Animation ────────────────────────────────── */
@@ -149,19 +198,17 @@ main > *:nth-child(4)  { animation-delay: 0.24s; }
 main > *:nth-child(5)  { animation-delay: 0.30s; }
 
 /* ─── Section Accents ────────────────────────────────────────── */
-/* Alternate warm background sections */
 section:nth-child(even) {
   background-color: var(--color-stone);
 }
 
-/* Horizontal rule dividers */
 hr {
   border-color: var(--color-stone);
 }
 
 /* ─── Image polish ───────────────────────────────────────────── */
 img {
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 /* Hero images — remove radius */

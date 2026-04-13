@@ -47,7 +47,7 @@ export function StickyMobileCta({ propertyName = "this property", price = "" }) 
               style={{
                 background: "#25D366",
                 color: "#fff",
-                borderRadius: "2px",
+                borderRadius: "var(--radius-btn)",
               }}
             >
               {/* WhatsApp icon */}
@@ -62,7 +62,7 @@ export function StickyMobileCta({ propertyName = "this property", price = "" }) 
               style={{
                 border: "1px solid rgba(255,255,255,0.3)",
                 color: "var(--color-ivory)",
-                borderRadius: "2px",
+                borderRadius: "var(--radius-btn)",
               }}
             >
               Call us

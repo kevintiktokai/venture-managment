@@ -24,7 +24,7 @@ export function Layout522() {
         </ScrollReveal>
         <StaggerReveal className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4" stagger={0.12}>
           {/* Main card */}
-          <div className="relative p-6 sm:col-span-2 md:p-8 lg:p-12">
+          <div className="relative p-6 sm:col-span-2 md:p-8 lg:p-12 overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)" }}>
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-black/50 z-10" />
               <img
@@ -51,7 +51,7 @@ export function Layout522() {
                   style={{
                     border: "1px solid rgba(255,255,255,0.5)",
                     color: "var(--color-ivory)",
-                    borderRadius: "2px",
+                    borderRadius: "var(--radius-btn)",
                   }}
                 >
                   Learn more
@@ -66,7 +66,7 @@ export function Layout522() {
             </div>
           </div>
           {/* Currency card */}
-          <div className="relative flex flex-col p-6 md:p-8 lg:p-6">
+          <div className="relative flex flex-col p-6 md:p-8 lg:p-6 overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)" }}>
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-black/50 z-10" />
               <img
@@ -96,7 +96,7 @@ export function Layout522() {
             </div>
           </div>
           {/* Infrastructure card */}
-          <div className="relative flex flex-col p-6 md:p-8 lg:p-6">
+          <div className="relative flex flex-col p-6 md:p-8 lg:p-6 overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)" }}>
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-black/50 z-10" />
               <img

@@ -181,7 +181,7 @@ export function Product12() {
                 onClick={() => scroll(-1)}
                 disabled={!canScrollLeft}
                 className="flex size-12 items-center justify-center border transition-all disabled:opacity-30"
-                style={{ borderColor: "var(--color-forest)", color: "var(--color-forest)", borderRadius: "2px" }}
+                style={{ borderColor: "var(--color-forest)", color: "var(--color-forest)", borderRadius: "50%" }}
                 aria-label="Scroll left"
               >
                 <RxChevronLeft className="size-5" />
@@ -190,7 +190,7 @@ export function Product12() {
                 onClick={() => scroll(1)}
                 disabled={!canScrollRight}
                 className="flex size-12 items-center justify-center border transition-all disabled:opacity-30"
-                style={{ borderColor: "var(--color-forest)", color: "var(--color-forest)", borderRadius: "2px" }}
+                style={{ borderColor: "var(--color-forest)", color: "var(--color-forest)", borderRadius: "50%" }}
                 aria-label="Scroll right"
               >
                 <RxChevronRight className="size-5" />
@@ -205,7 +205,7 @@ export function Product12() {
         <div className="container">
           <div
             className="flex flex-wrap items-center gap-3 rounded-sm p-4 md:p-5"
-            style={{ background: "var(--color-stone)", border: "1px solid var(--color-warm-gray)", borderRadius: "4px" }}
+            style={{ background: "var(--color-stone)", border: "1px solid rgba(43,36,32,0.08)", borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)" }}
           >
             {/* Suburb */}
             <div className="flex flex-col gap-1">
@@ -251,10 +251,11 @@ export function Product12() {
                     onClick={() => setBedsIdx(i)}
                     className="px-3 py-1 text-xs font-medium uppercase tracking-wider transition-all"
                     style={{
-                      borderRadius: "2px",
+                      borderRadius: "var(--radius-badge)",
                       background: bedsIdx === i ? "var(--color-forest)" : "transparent",
                       color: bedsIdx === i ? "var(--color-ivory)" : "var(--color-charcoal)",
                       border: `1px solid ${bedsIdx === i ? "var(--color-forest)" : "var(--color-warm-gray)"}`,
+                      boxShadow: bedsIdx === i ? "var(--shadow-btn)" : "none",
                     }}
                   >
                     {b.label}
@@ -312,7 +313,8 @@ export function Product12() {
                 style={{
                   background: "var(--color-forest)",
                   color: "var(--color-ivory)",
-                  borderRadius: "2px",
+                  borderRadius: "var(--radius-btn)",
+                  boxShadow: "var(--shadow-btn)",
                 }}
               >
                 Clear all filters
@@ -336,11 +338,11 @@ export function Product12() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, delay: i * 0.04 }}
-                className="flex-shrink-0 group cursor-pointer"
-                style={{ width: "clamp(280px, 30vw, 380px)", scrollSnapAlign: "start" }}
+                className="flex-shrink-0 group cursor-pointer p-3 transition-all duration-300 hover:-translate-y-1"
+                style={{ width: "clamp(280px, 30vw, 380px)", scrollSnapAlign: "start", borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}
               >
                 {/* Image with hover overlay */}
-                <div className="mb-3 aspect-[5/6] overflow-hidden md:mb-4 relative">
+                <div className="mb-3 aspect-[5/6] overflow-hidden md:mb-4 relative" style={{ borderRadius: "10px" }}>
                   <img
                     src={listing.image}
                     alt={listing.name}
@@ -357,7 +359,7 @@ export function Product12() {
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       className="flex items-center gap-2 px-5 py-3 text-xs font-medium uppercase tracking-widest transition-all hover:-translate-y-0.5"
-                      style={{ background: "var(--color-forest)", color: "var(--color-ivory)", borderRadius: "2px" }}
+                      style={{ background: "var(--color-forest)", color: "var(--color-ivory)", borderRadius: "var(--radius-btn)", boxShadow: "var(--shadow-btn)" }}
                     >
                       Inquire on WhatsApp
                     </a>
@@ -366,7 +368,7 @@ export function Product12() {
                   {listing.tag && (
                     <span
                       className="absolute top-3 left-3 px-2 py-1 text-xs uppercase tracking-widest font-medium"
-                      style={{ background: "var(--color-forest)", color: "var(--color-ivory)", borderRadius: "2px" }}
+                      style={{ background: "var(--color-forest)", color: "var(--color-ivory)", borderRadius: "var(--radius-badge)" }}
                     >
                       {listing.tag}
                     </span>
@@ -385,7 +387,7 @@ export function Product12() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 flex w-full items-center justify-center gap-2 px-5 py-3 text-xs font-medium uppercase tracking-widest transition-all hover:-translate-y-0.5 md:hidden"
-                  style={{ border: "1px solid var(--color-forest)", color: "var(--color-forest)", borderRadius: "2px" }}
+                  style={{ border: "1px solid var(--color-forest)", color: "var(--color-forest)", borderRadius: "var(--radius-btn)" }}
                 >
                   Inquire on WhatsApp
                 </a>

@@ -63,9 +63,13 @@ export function Team5() {
           stagger={0.1}
         >
           {team.map((member) => (
-            <div key={member.name} className="flex flex-col text-center group">
+            <div
+              key={member.name}
+              className="flex flex-col text-center group p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+              style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}
+            >
               <div className="rb-5 mb-5 flex w-full items-center justify-center md:mb-6">
-                <div className="overflow-hidden rounded-full size-20 min-h-20 min-w-20">
+                <div className="overflow-hidden rounded-full size-20 min-h-20 min-w-20 ring-3 ring-offset-2" style={{ ringColor: "var(--color-forest)" }}>
                   <img
                     src={member.image}
                     alt={member.name}

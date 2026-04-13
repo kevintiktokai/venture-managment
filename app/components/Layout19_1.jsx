@@ -37,7 +37,7 @@ export function Layout19_1() {
                 style={{
                   border: "1px solid var(--color-forest)",
                   color: "var(--color-forest)",
-                  borderRadius: "2px",
+                  borderRadius: "var(--radius-btn)",
                 }}
               >
                 About us

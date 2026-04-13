@@ -33,7 +33,8 @@ export function Cta31() {
             style={{
               background: "var(--color-ivory)",
               color: "var(--color-forest)",
-              borderRadius: "2px",
+              borderRadius: "var(--radius-btn)",
+              boxShadow: "var(--shadow-btn)",
             }}
           >
             Browse properties
@@ -46,7 +47,7 @@ export function Cta31() {
             style={{
               border: "1px solid rgba(237,215,192,0.5)",
               color: "var(--color-ivory)",
-              borderRadius: "2px",
+              borderRadius: "var(--radius-btn)",
             }}
           >
             WhatsApp us

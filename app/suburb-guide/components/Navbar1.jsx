@@ -72,7 +72,7 @@ export function Navbar1() {
         <Link href="/" className="flex items-center gap-3">
           <div
             className="flex h-9 w-9 items-center justify-center"
-            style={{ background: "var(--color-forest)", borderRadius: "2px" }}
+            style={{ background: "var(--color-forest)", borderRadius: "var(--radius-btn)" }}
           >
             <span
               className="text-xs font-bold tracking-wider"
@@ -158,7 +158,7 @@ export function Navbar1() {
                       style={{
                         fontFamily: "var(--font-body)",
                         color: "var(--color-charcoal)",
-                        borderRadius: "2px",
+                        borderRadius: "var(--radius-btn)",
                       }}
                     >
                       {label}
@@ -179,7 +179,7 @@ export function Navbar1() {
               fontFamily: "var(--font-body)",
               border: `1px solid ${nav.isScrolled ? "var(--color-forest)" : "rgba(247,243,238,0.5)"}`,
               color: nav.isScrolled ? "var(--color-forest)" : "var(--color-ivory)",
-              borderRadius: "2px",
+              borderRadius: "var(--radius-btn)",
             }}
           >
             Valuation
@@ -193,7 +193,7 @@ export function Navbar1() {
               fontFamily: "var(--font-body)",
               background: "var(--color-terracotta)",
               color: "var(--color-ivory)",
-              borderRadius: "2px",
+              borderRadius: "var(--radius-btn)",
             }}
           >
             WhatsApp
@@ -298,7 +298,7 @@ export function Navbar1() {
             style={{
               background: "var(--color-terracotta)",
               color: "var(--color-ivory)",
-              borderRadius: "2px",
+              borderRadius: "var(--radius-btn)",
             }}
           >
             WhatsApp Us

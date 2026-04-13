@@ -107,8 +107,9 @@ export function Header26() {
               style={{
                 background: "var(--color-terracotta)",
                 color: "var(--color-ivory)",
-                borderRadius: "2px",
+                borderRadius: "var(--radius-btn)",
                 fontFamily: "var(--font-body)",
+                boxShadow: "0 4px 14px rgba(48,85,104,0.35)",
               }}
             >
               View For Sale
@@ -119,7 +120,7 @@ export function Header26() {
               style={{
                 border: "1px solid rgba(247,243,238,0.5)",
                 color: "var(--color-ivory)",
-                borderRadius: "2px",
+                borderRadius: "var(--radius-btn)",
                 fontFamily: "var(--font-body)",
               }}
             >

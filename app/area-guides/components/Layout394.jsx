@@ -87,7 +87,7 @@ export function Layout394() {
                   style={{
                     border: "1px solid var(--color-forest)",
                     color: "var(--color-forest)",
-                    borderRadius: "2px",
+                    borderRadius: "var(--radius-btn)",
                   }}
                 >
                   Inquire on WhatsApp
