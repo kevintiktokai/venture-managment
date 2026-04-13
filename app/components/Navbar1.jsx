@@ -4,7 +4,9 @@ import { useMediaQuery } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { RxChevronDown } from "react-icons/rx";
+import { DarkModeToggle } from "./DarkModeToggle";
 
 const useNavState = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,6 +55,7 @@ const moreLinks = [
 
 export function Navbar1() {
   const nav = useNavState();
+  const pathname = usePathname();
 
   return (
     <header
@@ -95,21 +98,32 @@ export function Navbar1() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className="px-4 py-2 text-sm font-medium transition-colors duration-200"
-              style={{
-                fontFamily: "var(--font-body)",
-                color: nav.isScrolled
-                  ? "var(--color-charcoal)"
-                  : "rgba(247,243,238,0.85)",
-              }}
-            >
-              {label}
-            </Link>
-          ))}
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={href}
+                href={href}
+                className="relative px-4 py-2 text-sm font-medium transition-colors duration-200"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: nav.isScrolled
+                    ? isActive ? "var(--color-forest)" : "var(--color-charcoal)"
+                    : isActive ? "var(--color-gold)" : "rgba(247,243,238,0.85)",
+                }}
+              >
+                {label}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute bottom-0 left-4 right-4 h-px"
+                    style={{ background: nav.isScrolled ? "var(--color-forest)" : "var(--color-gold)" }}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
 
           {/* More dropdown */}
           <div
@@ -172,6 +186,7 @@ export function Navbar1() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-3">
+          <DarkModeToggle scrolled={nav.isScrolled} />
           <Link
             href="/about-us#contact"
             className="px-5 py-2.5 text-xs font-medium uppercase tracking-widest transition-all duration-200 hover:opacity-80"

@@ -1,225 +1,275 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { RxChevronRight } from "react-icons/rx";
+import { ScrollReveal } from "./ScrollReveal";
+
+const suburbs = [
+  {
+    id: "borrowdale",
+    name: "Borrowdale",
+    tagline: "Premium. Tree-lined. Secure.",
+    description: "Established gated communities, top-tier schools, and Harare's most prestigious address. Starting from $180k.",
+    priceFrom: "$180k",
+    image: "/images/suburb-borrowdale.jpg",
+    // SVG position on schematic map (% of viewBox)
+    cx: 62, cy: 22,
+  },
+  {
+    id: "highlands",
+    name: "Highlands",
+    tagline: "Our home base. Infrastructure-ready.",
+    description: "Close to town, reliable solar and borehole setups, modern builds. Our office is here.",
+    priceFrom: "$220k",
+    image: "/images/suburb-highlands.jpg",
+    cx: 52, cy: 38,
+  },
+  {
+    id: "avondale",
+    name: "Avondale",
+    tagline: "Value. Community. Growth.",
+    description: "Vibrant, walkable suburb with excellent investment upside and improving infrastructure.",
+    priceFrom: "$150k",
+    image: "/images/hero-properties.jpg",
+    cx: 38, cy: 42,
+  },
+  {
+    id: "mt-pleasant",
+    name: "Mt Pleasant",
+    tagline: "University area. Rental demand.",
+    description: "Newer builds, strong rental yield driven by university proximity. Ideal for diaspora investors.",
+    priceFrom: "$160k",
+    image: "/images/property-featured.jpg",
+    cx: 44, cy: 28,
+  },
+  {
+    id: "greendale",
+    name: "Greendale",
+    tagline: "Quiet streets. Capital growth.",
+    description: "Family-friendly with affordable entry points and strong future development potential.",
+    priceFrom: "$130k",
+    image: "/images/hero-home.jpg",
+    cx: 68, cy: 48,
+  },
+];
+
+// Simple schematic road paths for a stylised Harare map
+const ROADS = [
+  "M 40 50 L 80 50",    // horizontal main road
+  "M 50 10 L 50 90",    // vertical
+  "M 30 30 L 70 70",    // diagonal
+  "M 70 30 L 30 70",    // cross diagonal
+  "M 20 50 L 40 50",
+  "M 55 20 L 75 40",
+];
 
 export function Layout526() {
+  const [active, setActive] = useState(suburbs[0]);
+
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 overflow-hidden">
       <div className="container">
-        <div className="mb-12 md:mb-18 lg:mb-20">
+        <ScrollReveal variant="fadeUp" className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="mb-3 font-semibold md:mb-4">Suburbs</p>
             <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
               Where to buy in Harare
             </h2>
             <p className="md:text-md">
-              Each neighborhood has its own character. Here's what you need to
-              know.
+              Hover a suburb on the map to explore it. Each neighbourhood has its own character.
             </p>
           </div>
-        </div>
-        <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3">
-          {/* Column 1 */}
-          <div className="grid grid-cols-1 gap-6 md:gap-8">
-            {/* Borrowdale */}
-            <div className="relative flex flex-col justify-center p-6 md:p-8 lg:min-h-[32rem]">
-              <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/50 z-10" />
-                <img
-                  src="/images/suburb-borrowdale.jpg"
-                  className="size-full object-cover"
-                  alt="Borrowdale suburb, Harare"
-                />
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
+          {/* ── Interactive SVG Map ── */}
+          <ScrollReveal variant="slideLeft">
+            <div
+              className="relative rounded-sm overflow-hidden"
+              style={{ background: "var(--color-charcoal)", aspectRatio: "1/1", maxWidth: 520 }}
+            >
+              {/* Background image of active suburb, blurred */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active.id}
+                  className="absolute inset-0"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.18 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <img src={active.image} alt="" className="size-full object-cover" />
+                </motion.div>
+              </AnimatePresence>
+
+              <svg
+                viewBox="0 0 100 100"
+                className="absolute inset-0 size-full"
+                style={{ opacity: 0.15 }}
+              >
+                {ROADS.map((d, i) => (
+                  <path key={i} d={d} stroke="var(--color-ivory)" strokeWidth="0.5" fill="none" />
+                ))}
+              </svg>
+
+              {/* Label: Harare CBD */}
+              <div
+                className="absolute text-xs uppercase tracking-widest opacity-30"
+                style={{ left: "42%", top: "52%", color: "var(--color-ivory)", fontFamily: "var(--font-body)" }}
+              >
+                CBD
               </div>
-              <div className="relative z-10">
-                <p className="mb-2 inline-block text-sm font-semibold text-text-alternative">
-                  Borrowdale
-                </p>
-                <h3 className="mb-3 text-2xl font-bold text-text-alternative md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Established, tree-lined streets with strong security presence.
-                </h3>
-                <p className="text-text-alternative">
-                  Premium homes, gated communities, and top-tier schools. Starting from $180k.
-                </p>
-                <div className="mt-5 flex items-center md:mt-6">
-                  <Link
-                    href="/suburb-guide"
-                    className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
-                  >
-                    Explore Borrowdale <RxChevronRight />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            {/* Highlands */}
-            <div className="relative flex flex-col p-6 md:p-8">
-              <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/50 z-10" />
-                <img
-                  src="/images/suburb-highlands.jpg"
-                  className="size-full object-cover"
-                  alt="Highlands suburb, Harare"
-                />
-              </div>
-              <div className="relative z-10 flex flex-1 flex-col justify-between">
-                <div>
-                  <p className="mb-2 inline-block text-sm font-semibold text-text-alternative">
-                    Highlands
-                  </p>
-                  <h3 className="mb-3 text-2xl font-bold text-text-alternative md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                    Premium location with modern infrastructure and reliable solar installations.
-                  </h3>
-                  <p className="text-text-alternative">
-                    Close to town with established boreholes. Our office is here too.
-                  </p>
-                </div>
-                <div className="mt-5 flex items-center md:mt-6">
-                  <Link
-                    href="/suburb-guide"
-                    className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
-                  >
-                    Explore Highlands <RxChevronRight />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Column 2 */}
-          <div className="grid grid-cols-1 gap-6 md:gap-8">
-            {/* Avondale */}
-            <div className="relative flex flex-col p-6 md:p-8">
-              <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/50 z-10" />
-                <img
-                  src="/images/hero-properties.jpg"
-                  className="size-full object-cover"
-                  alt="Avondale suburb, Harare"
-                />
-              </div>
-              <div className="relative z-10 flex flex-1 flex-col justify-between">
-                <div>
-                  <p className="mb-2 inline-block text-sm font-semibold text-text-alternative">
-                    Avondale
-                  </p>
-                  <h3 className="mb-3 text-2xl font-bold text-text-alternative md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                    Growing suburb with good value and improving borehole water systems.
-                  </h3>
-                  <p className="text-text-alternative">
-                    Vibrant community, walkable shops, and excellent value for investors.
-                  </p>
-                </div>
-                <div className="mt-5 flex items-center md:mt-6">
-                  <Link
-                    href="/suburb-guide"
-                    className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
-                  >
-                    Explore Avondale <RxChevronRight />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            {/* Mt Pleasant */}
-            <div className="relative flex flex-col justify-center p-6 md:p-8 lg:min-h-[32rem]">
-              <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/50 z-10" />
-                <img
-                  src="/images/property-featured.jpg"
-                  className="size-full object-cover"
-                  alt="Mt Pleasant suburb, Harare"
-                />
-              </div>
-              <div className="relative z-10">
-                <p className="mb-2 inline-block text-sm font-semibold text-text-alternative">
-                  Mt Pleasant
-                </p>
-                <h3 className="mb-3 text-2xl font-bold text-text-alternative md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Newer development with contemporary homes and active community networks.
-                </h3>
-                <p className="text-text-alternative">
-                  University area with growing rental demand. Ideal for diaspora investors.
-                </p>
-                <div className="mt-5 flex items-center md:mt-6">
-                  <Link
-                    href="/suburb-guide"
-                    className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
-                  >
-                    Explore Mt Pleasant <RxChevronRight />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Column 3 */}
-          <div className="grid grid-cols-1 gap-6 md:gap-8">
-            {/* Greendale */}
-            <div className="relative flex flex-col justify-center p-6 md:p-8 lg:min-h-[32rem]">
-              <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/50 z-10" />
-                <img
-                  src="/images/hero-home.jpg"
-                  className="size-full object-cover"
-                  alt="Greendale suburb, Harare"
-                />
-              </div>
-              <div className="relative z-10">
-                <p className="mb-2 inline-block text-sm font-semibold text-text-alternative">
-                  Greendale
-                </p>
-                <h3 className="mb-3 text-2xl font-bold text-text-alternative md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Emerging area with affordable options and developing infrastructure.
-                </h3>
-                <p className="text-text-alternative">
-                  Quiet, family-friendly streets with strong capital growth potential.
-                </p>
-                <div className="mt-5 flex items-center md:mt-6">
-                  <Link
-                    href="/suburb-guide"
-                    className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
-                  >
-                    Explore Greendale <RxChevronRight />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            {/* CTA card */}
-            <div className="relative flex flex-col p-6 md:p-8">
-              <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/60 z-10" />
-                <img
-                  src="/images/about-team.jpg"
-                  className="size-full object-cover"
-                  alt="Venture Management team"
-                />
-              </div>
-              <div className="relative z-10 flex flex-1 flex-col justify-between">
-                <div>
-                  <p className="mb-2 inline-block text-sm font-semibold text-text-alternative">
-                    Not sure yet?
-                  </p>
-                  <h3 className="mb-3 text-2xl font-bold text-text-alternative md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                    Need help choosing the right suburb?
-                  </h3>
-                  <p className="text-text-alternative">
-                    WhatsApp us your budget and lifestyle needs — we'll guide you to the right neighborhood.
-                  </p>
-                  <div className="mt-5 flex items-center md:mt-6">
-                    <a
-                      href="https://wa.me/263771681728"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm font-medium text-text-alternative transition-colors hover:opacity-80"
+
+              {/* Suburb dots */}
+              <svg viewBox="0 0 100 100" className="absolute inset-0 size-full">
+                {suburbs.map((s) => {
+                  const isActive = active.id === s.id;
+                  return (
+                    <g
+                      key={s.id}
+                      onClick={() => setActive(s)}
+                      onMouseEnter={() => setActive(s)}
+                      style={{ cursor: "pointer" }}
                     >
-                      Ask us on WhatsApp <RxChevronRight />
-                    </a>
-                  </div>
-                </div>
+                      {/* Pulse ring */}
+                      {isActive && (
+                        <circle
+                          cx={s.cx}
+                          cy={s.cy}
+                          r="5"
+                          fill="none"
+                          stroke="var(--color-gold)"
+                          strokeWidth="0.8"
+                          style={{ animation: "mapPulse 1.8s ease-out infinite" }}
+                        />
+                      )}
+                      {/* Dot */}
+                      <circle
+                        cx={s.cx}
+                        cy={s.cy}
+                        r={isActive ? 2.8 : 2}
+                        fill={isActive ? "var(--color-gold)" : "var(--color-ivory)"}
+                        opacity={isActive ? 1 : 0.55}
+                        style={{ transition: "all 0.2s" }}
+                      />
+                      {/* Name label */}
+                      <text
+                        x={s.cx + 3.5}
+                        y={s.cy + 1}
+                        fontSize="3"
+                        fill={isActive ? "var(--color-gold)" : "var(--color-ivory)"}
+                        opacity={isActive ? 1 : 0.55}
+                        fontFamily="DM Sans, sans-serif"
+                        style={{ transition: "all 0.2s", userSelect: "none" }}
+                      >
+                        {s.name}
+                      </text>
+                    </g>
+                  );
+                })}
+              </svg>
+
+              {/* Compass */}
+              <div
+                className="absolute bottom-4 right-4 text-xs uppercase tracking-widest opacity-30 flex flex-col items-center gap-0.5"
+                style={{ color: "var(--color-ivory)" }}
+              >
+                <span>N</span>
+                <div className="h-3 w-px" style={{ background: "var(--color-ivory)" }} />
               </div>
             </div>
-          </div>
+          </ScrollReveal>
+
+          {/* ── Detail panel ── */}
+          <ScrollReveal variant="slideRight" delay={0.1}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {/* Image */}
+                <div className="mb-6 overflow-hidden" style={{ aspectRatio: "16/9", borderRadius: "4px" }}>
+                  <img
+                    src={active.image}
+                    alt={active.name}
+                    className="size-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+
+                {/* Content */}
+                <p className="mb-1 text-sm font-semibold" style={{ color: "var(--color-forest)" }}>
+                  {active.name}
+                </p>
+                <h3
+                  className="mb-3 text-3xl font-light md:text-4xl"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {active.tagline}
+                </h3>
+                <p className="mb-4 leading-relaxed opacity-75">{active.description}</p>
+                <p className="mb-6 text-sm font-medium">
+                  From{" "}
+                  <span style={{ color: "var(--color-forest)", fontWeight: 600 }}>
+                    {active.priceFrom}
+                  </span>
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4">
+                  <Link
+                    href="/suburb-guide"
+                    className="inline-block px-5 py-2.5 text-xs font-medium uppercase tracking-widest transition-all hover:-translate-y-0.5"
+                    style={{
+                      background: "var(--color-forest)",
+                      color: "var(--color-ivory)",
+                      borderRadius: "2px",
+                    }}
+                  >
+                    Suburb guide
+                  </Link>
+                  <Link
+                    href="/properties"
+                    className="flex items-center gap-1 text-sm font-medium transition-colors"
+                    style={{ color: "var(--color-forest)" }}
+                  >
+                    See listings <RxChevronRight />
+                  </Link>
+                </div>
+
+                {/* Suburb selector chips */}
+                <div className="mt-8 flex flex-wrap gap-2">
+                  {suburbs.map((s) => (
+                    <button
+                      key={s.id}
+                      onClick={() => setActive(s)}
+                      className="px-3 py-1.5 text-xs font-medium uppercase tracking-wider transition-all"
+                      style={{
+                        borderRadius: "2px",
+                        background: active.id === s.id ? "var(--color-forest)" : "transparent",
+                        color: active.id === s.id ? "var(--color-ivory)" : "var(--color-charcoal)",
+                        border: `1px solid ${active.id === s.id ? "var(--color-forest)" : "var(--color-warm-gray)"}`,
+                      }}
+                    >
+                      {s.name}
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </ScrollReveal>
         </div>
       </div>
+
+      <style>{`
+        @keyframes mapPulse {
+          0%   { r: 3; opacity: 0.8; }
+          100% { r: 9; opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 }

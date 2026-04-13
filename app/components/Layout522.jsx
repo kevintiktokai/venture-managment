@@ -4,12 +4,13 @@ import React from "react";
 import Link from "next/link";
 import { RxChevronRight } from "react-icons/rx";
 import { BiSolidShieldAlt2, BiDollar, BiSolidBolt } from "react-icons/bi";
+import { ScrollReveal, StaggerReveal } from "./ScrollReveal";
 
 export function Layout522() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <div className="mb-12 md:mb-18 lg:mb-20">
+        <ScrollReveal variant="fadeUp" className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="mb-3 font-semibold md:mb-4">Verified</p>
             <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
@@ -20,8 +21,8 @@ export function Layout522() {
               standing
             </p>
           </div>
-        </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
+        </ScrollReveal>
+        <StaggerReveal className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4" stagger={0.12}>
           {/* Main card */}
           <div className="relative p-6 sm:col-span-2 md:p-8 lg:p-12">
             <div className="absolute inset-0 z-0">
@@ -124,7 +125,7 @@ export function Layout522() {
               </div>
             </div>
           </div>
-        </div>
+        </StaggerReveal>
       </div>
     </section>
   );

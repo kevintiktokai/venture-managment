@@ -13,10 +13,12 @@ import { Faq9 } from "./components/Faq9";
 import { Logo6 } from "./components/Logo6";
 import { Cta32 } from "./components/Cta32";
 import { Footer12 } from "./components/Footer12";
+import { StickyMobileCta } from "./components/StickyMobileCta";
 
 export default function Page() {
   return (
     <div>
+      <StickyMobileCta propertyName="Highlands — Contemporary villa" price="$420,000" />
       <Navbar1 />
       <ProductHeader9 />
       <Layout145 />

@@ -22,6 +22,32 @@
   --font-body:    'DM Sans', system-ui, sans-serif;
 }
 
+/* ─── Dark Mode Tokens ───────────────────────────────────────── */
+.dark {
+  --color-ivory:       #1a1a1a;
+  --color-stone:       #242424;
+  --color-warm-gray:   #6b6b6b;
+  --color-charcoal:    #f0ece8;
+  --color-forest:      #5a9abf;
+  --color-forest-mid:  #7bbcd8;
+  --color-gold:        #c4a882;
+  background-color: #111;
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #111;
+  color: #f0ece8;
+}
+
+.dark section {
+  background-color: #1a1a1a;
+}
+
+.dark section:nth-child(even) {
+  background-color: #141414;
+}
+
 /* ─── Base Resets ────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
