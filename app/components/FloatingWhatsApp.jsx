@@ -16,7 +16,7 @@ export function FloatingWhatsApp() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed bottom-6 right-6 z-[9997] flex items-center gap-3"
+          className="fixed bottom-[104px] right-5 z-[9997] flex items-center gap-3 md:bottom-24 md:right-8"
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5 }}

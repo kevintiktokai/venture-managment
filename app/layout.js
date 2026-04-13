@@ -2,6 +2,7 @@ import "./globals.css";
 import { CursorFollower } from "./components/CursorFollower";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { PageTransition } from "./components/PageTransition";
+import { ChatBot } from "./components/ChatBot";
 
 export const metadata = {
   title: "Venture Management Real Estate",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <div className="ambient-orb ambient-orb-3" />
         <CursorFollower />
         <FloatingWhatsApp />
+        <ChatBot />
         <main className="flex-1">
           <PageTransition>{children}</PageTransition>
         </main>
