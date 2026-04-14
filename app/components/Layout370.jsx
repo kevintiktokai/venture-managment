@@ -23,13 +23,13 @@ export function Layout370() {
         <div className="grid grid-cols-1 gap-6 md:gap-8">
           <StaggerReveal className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4" stagger={0.15}>
             {/* Step 1 */}
-            <div className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1"
+            <div className="flex flex-col card-hover overflow-hidden"
               style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
               <div className="flex items-center justify-center overflow-hidden" style={{ height: "200px" }}>
                 <img
                   src="/images/hero-home.jpg"
                   alt="Connect with Venture Management"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover card-img"
                 />
               </div>
               <div className="flex flex-col justify-center p-6">
@@ -54,13 +54,13 @@ export function Layout370() {
               </div>
             </div>
             {/* Step 2 */}
-            <div className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1"
+            <div className="flex flex-col card-hover overflow-hidden"
               style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
               <div className="flex items-center justify-center overflow-hidden" style={{ height: "200px" }}>
                 <img
                   src="/images/suburb-highlands.jpg"
                   alt="View and verify properties"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover card-img"
                 />
               </div>
               <div className="flex flex-col justify-center p-6">
@@ -83,13 +83,13 @@ export function Layout370() {
               </div>
             </div>
             {/* Step 3 */}
-            <div className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1"
+            <div className="flex flex-col card-hover overflow-hidden"
               style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
               <div className="flex items-center justify-center overflow-hidden" style={{ height: "200px" }}>
                 <img
                   src="/images/property-featured.jpg"
                   alt="Close with confidence"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover card-img"
                 />
               </div>
               <div className="flex flex-col justify-center p-6">

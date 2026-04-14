@@ -207,12 +207,55 @@ a[class*="border-border-primary"]:not([class*="bg-background-alternative"]):hove
   box-shadow: var(--shadow-card);
   border-color: rgba(43,36,32,0.08) !important;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [class*="border-border-primary"]:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-3px);
+  transform: translateY(-6px);
+}
+
+/* ─── Premium Card Hover System ─────────────────────────────── */
+.card-hover {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12) 0%,
+    rgba(255,255,255,0) 50%,
+    rgba(255,255,255,0.04) 100%
+  );
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(43,36,32,0.12), 0 8px 16px rgba(43,36,32,0.06);
+}
+
+.card-hover:hover::before {
+  opacity: 1;
+}
+
+/* Image zoom inside card-hover */
+.card-hover .card-img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-hover:hover .card-img {
+  transform: scale(1.08);
 }
 
 /* ─── Page Entrance Animation ────────────────────────────────── */

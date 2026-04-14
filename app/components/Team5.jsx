@@ -65,7 +65,7 @@ export function Team5() {
           {team.map((member) => (
             <div
               key={member.name}
-              className="flex flex-col text-center group p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+              className="flex flex-col text-center group p-6 md:p-8 card-hover"
               style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}
             >
               <div className="rb-5 mb-5 flex w-full items-center justify-center md:mb-6">
@@ -73,7 +73,7 @@ export function Team5() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="size-full object-cover card-img"
                   />
                 </div>
               </div>

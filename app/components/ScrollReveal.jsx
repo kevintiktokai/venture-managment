@@ -7,33 +7,41 @@ import { motion, useInView } from "framer-motion";
  * ScrollReveal — wraps children with a scroll-triggered entrance animation.
  *
  * Props:
- *  variant  — "fadeUp" | "fadeIn" | "slideLeft" | "slideRight" | "scaleUp"
+ *  variant  — animation preset name
  *  delay    — seconds (default 0)
- *  duration — seconds (default 0.7)
+ *  duration — seconds (default 0.8)
  *  once     — only animate once (default true)
  *  className — forwarded to wrapper div
  */
 
 const variants = {
   fadeUp: {
-    hidden: { opacity: 0, y: 48 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 60, filter: "blur(4px)" },
+    visible: { opacity: 1, y: 0, filter: "blur(0px)" },
   },
   fadeIn: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    hidden: { opacity: 0, filter: "blur(6px)" },
+    visible: { opacity: 1, filter: "blur(0px)" },
   },
   slideLeft: {
-    hidden: { opacity: 0, x: -56 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -80, filter: "blur(3px)" },
+    visible: { opacity: 1, x: 0, filter: "blur(0px)" },
   },
   slideRight: {
-    hidden: { opacity: 0, x: 56 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: 80, filter: "blur(3px)" },
+    visible: { opacity: 1, x: 0, filter: "blur(0px)" },
   },
   scaleUp: {
-    hidden: { opacity: 0, scale: 0.92 },
-    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.88, filter: "blur(6px)" },
+    visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+  },
+  clipUp: {
+    hidden: { opacity: 0, y: 80, clipPath: "inset(20% 0% 0% 0%)" },
+    visible: { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" },
+  },
+  rotateIn: {
+    hidden: { opacity: 0, rotate: -3, y: 40, scale: 0.96 },
+    visible: { opacity: 1, rotate: 0, y: 0, scale: 1 },
   },
 };
 
@@ -41,13 +49,12 @@ export function ScrollReveal({
   children,
   variant = "fadeUp",
   delay = 0,
-  duration = 0.7,
+  duration = 0.85,
   once = true,
   className = "",
-  as: Tag = "div",
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once, margin: "-80px 0px" });
+  const isInView = useInView(ref, { once, margin: "-60px 0px" });
 
   return (
     <motion.div
@@ -56,7 +63,7 @@ export function ScrollReveal({
       variants={variants[variant]}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
@@ -65,11 +72,11 @@ export function ScrollReveal({
 
 /**
  * StaggerReveal — wraps a list of children with staggered scroll-triggered entrance.
- * Each direct child gets its own delayed animation.
+ * Each direct child gets its own delayed animation with a rising, deblurring effect.
  */
-export function StaggerReveal({ children, className = "", stagger = 0.1, delay = 0 }) {
+export function StaggerReveal({ children, className = "", stagger = 0.12, delay = 0 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px 0px" });
+  const isInView = useInView(ref, { once: true, margin: "-60px 0px" });
 
   return (
     <motion.div
@@ -82,8 +89,14 @@ export function StaggerReveal({ children, className = "", stagger = 0.1, delay =
       {React.Children.map(children, (child) => (
         <motion.div
           variants={{
-            hidden: { opacity: 0, y: 36 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+            hidden: { opacity: 0, y: 50, filter: "blur(4px)", scale: 0.97 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              scale: 1,
+              transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+            },
           }}
         >
           {child}

@@ -40,7 +40,7 @@ export function Layout522() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <ScrollReveal variant="fadeUp" className="mb-12 md:mb-18 lg:mb-20">
+        <ScrollReveal variant="clipUp" className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="eyebrow mb-3 md:mb-4">Verified</p>
             <h2
@@ -62,7 +62,7 @@ export function Layout522() {
           {cards.map(({ icon: Icon, label, title, desc, img, imgAlt, link }) => (
             <div
               key={title}
-              className="relative flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1"
+              className="relative flex flex-col card-hover overflow-hidden"
               style={{
                 borderRadius: "var(--radius-card)",
                 boxShadow: "var(--shadow-card)",

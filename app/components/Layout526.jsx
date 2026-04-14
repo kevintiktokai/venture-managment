@@ -71,7 +71,7 @@ export function Layout526() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 overflow-hidden">
       <div className="container">
-        <ScrollReveal variant="fadeUp" className="mb-12 md:mb-18 lg:mb-20">
+        <ScrollReveal variant="rotateIn" className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="eyebrow mb-3 md:mb-4">Suburbs</p>
             <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
@@ -197,7 +197,7 @@ export function Layout526() {
                   <img
                     src={active.image}
                     alt={active.name}
-                    className="size-full object-cover transition-transform duration-700 hover:scale-105"
+                    className="size-full object-cover card-img"
                   />
                 </div>
 

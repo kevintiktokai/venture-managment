@@ -2,21 +2,22 @@
 
 import React from "react";
 import { BiSolidStar } from "react-icons/bi";
+import { ScrollReveal, StaggerReveal } from "./ScrollReveal";
 
 export function Testimonial17() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
+        <ScrollReveal variant="fadeUp" className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <h2 className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
             What buyers say
           </h2>
           <p className="md:text-md">
             Real feedback from people who've bought with us.
           </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+        </ScrollReveal>
+        <StaggerReveal className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" stagger={0.15}>
+          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 card-hover"
             style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
             <div className="rb-5 mb-5 md:mb-6">
               <div className="mb-5 flex md:mb-6">
@@ -44,7 +45,7 @@ export function Testimonial17() {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 card-hover"
             style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
             <div className="rb-5 mb-5 md:mb-6">
               <div className="mb-5 flex md:mb-6">
@@ -72,7 +73,7 @@ export function Testimonial17() {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+          <div className="flex w-full flex-col items-start justify-between p-6 md:p-8 card-hover"
             style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}>
             <div className="rb-5 mb-5 md:mb-6">
               <div className="mb-5 flex md:mb-6">
@@ -100,7 +101,7 @@ export function Testimonial17() {
               </div>
             </div>
           </div>
-        </div>
+        </StaggerReveal>
       </div>
     </section>
   );

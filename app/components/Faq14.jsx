@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { BiSolidShieldAlt2, BiWorld, BiDollar, BiSolidHomeHeart, BiSolidBolt, BiTime } from "react-icons/bi";
+import { ScrollReveal, StaggerReveal } from "./ScrollReveal";
 
 export function Faq14() {
   const faqs = [
@@ -41,20 +42,20 @@ export function Faq14() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
+        <ScrollReveal variant="scaleUp" className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <h2 className="rb-5 mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl">
             Questions
           </h2>
           <p className="md:text-md">
-            Common concerns answered. We're here to make buying clear and
+            Common concerns answered. We&apos;re here to make buying clear and
             straightforward.
           </p>
-        </div>
-        <div className="container grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12 lg:gap-y-16">
+        </ScrollReveal>
+        <StaggerReveal className="container grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12 lg:gap-y-16" stagger={0.1}>
           {faqs.map(({ icon: Icon, question, answer }) => (
             <div
               key={question}
-              className="flex w-full flex-col items-center text-center p-6 md:p-8 transition-all duration-300 hover:-translate-y-1"
+              className="flex w-full flex-col items-center text-center p-6 md:p-8 card-hover"
               style={{ borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}
             >
               <div className="rb-5 mb-5 md:mb-6 flex items-center justify-center size-14 rounded-full" style={{ background: "rgba(48,85,104,0.08)" }}>
@@ -66,8 +67,8 @@ export function Faq14() {
               <p className="text-sm leading-relaxed opacity-75">{answer}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-12 text-center md:mt-18 lg:mt-20">
+        </StaggerReveal>
+        <ScrollReveal variant="fadeUp" delay={0.3} className="mt-12 text-center md:mt-18 lg:mt-20">
           <h4 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
             Still have questions?
           </h4>
@@ -90,7 +91,7 @@ export function Faq14() {
               Contact us
             </a>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

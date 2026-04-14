@@ -338,7 +338,7 @@ export function Product12() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, delay: i * 0.04 }}
-                className="flex-shrink-0 group cursor-pointer p-3 transition-all duration-300 hover:-translate-y-1"
+                className="flex-shrink-0 group cursor-pointer p-3 card-hover"
                 style={{ width: "clamp(280px, 30vw, 380px)", scrollSnapAlign: "start", borderRadius: "var(--radius-card)", boxShadow: "var(--shadow-card)", background: "var(--color-ivory)" }}
               >
                 {/* Image with hover overlay */}
@@ -346,7 +346,7 @@ export function Product12() {
                   <img
                     src={listing.image}
                     alt={listing.name}
-                    className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="size-full object-cover card-img"
                   />
                   {/* Hover CTA overlay */}
                   <div

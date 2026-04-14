@@ -47,7 +47,7 @@ export function Layout145() {
             <img
               src={galleryImages[0].src}
               alt={galleryImages[0].alt}
-              className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="size-full object-cover card-img"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
               <RxZoomIn className="size-8 text-white" />
@@ -65,7 +65,7 @@ export function Layout145() {
               <img
                 src={img.src}
                 alt={img.alt}
-                className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="size-full object-cover card-img"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
                 <RxZoomIn className="size-6 text-white" />
