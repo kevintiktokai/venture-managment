@@ -69,20 +69,9 @@ export function Navbar1() {
     >
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between px-[5%] py-4 lg:py-5">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <div
-            className="flex h-9 w-9 items-center justify-center"
-            style={{ background: "var(--color-forest)", borderRadius: "var(--radius-btn)" }}
-          >
-            <span
-              className="text-xs font-bold tracking-wider"
-              style={{ color: "var(--color-gold)", fontFamily: "var(--font-display)" }}
-            >
-              HRP
-            </span>
-          </div>
+        <Link href="/" className="flex items-center">
           <span
-            className="hidden text-base font-medium sm:block transition-colors duration-300"
+            className="text-lg font-medium transition-colors duration-300"
             style={{
               fontFamily: "var(--font-display)",
               color: nav.isScrolled ? "var(--color-charcoal)" : "var(--color-ivory)",
@@ -92,7 +81,6 @@ export function Navbar1() {
             Venture Management
           </span>
         </Link>
-
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map(({ href, label }) => (
