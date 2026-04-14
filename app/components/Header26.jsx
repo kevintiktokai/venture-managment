@@ -50,17 +50,6 @@ export function Header26() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className="max-w-2xl">
-          {/* Eyebrow — slides in from left */}
-          <motion.p
-            className="mb-6 text-sm font-medium uppercase tracking-[0.2em]"
-            style={{ color: "var(--color-gold)" }}
-            initial={{ opacity: 0, x: -24 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-          >
-            Venture Management Real Estate
-          </motion.p>
-
           {/* Headline — staggered lines */}
           <motion.h1
             className="mb-6 text-white"

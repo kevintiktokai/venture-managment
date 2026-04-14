@@ -10,8 +10,8 @@ export function Header69() {
           The Lifeline of Your Investment
         </h1>
         <p className="text-text-alternative md:text-md">
-          Venture Management Real Estate — sales, property management,
-          development &amp; valuations across Zimbabwe since 2023.
+          Sales, property management, development &amp; valuations
+          across Zimbabwe since 2023.
         </p>
       </div>
       <div className="absolute inset-0 z-0">

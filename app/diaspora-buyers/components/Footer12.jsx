@@ -139,7 +139,7 @@ export function Footer12() {
 
         <div className="flex flex-col-reverse items-start justify-between pt-6 text-sm md:flex-row md:items-center md:pt-8">
           <p style={{ color: "rgba(237,215,192,0.4)" }}>
-            © 2025 Venture Management Real Estate. All rights reserved.
+            © 2025 Venture Management. All rights reserved.
           </p>
           <div className="mb-4 flex items-center gap-4 md:mb-0">
             <a

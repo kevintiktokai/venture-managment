@@ -10,12 +10,6 @@ export function Cta31() {
       style={{ background: "var(--color-forest)" }}
     >
       <div className="container flex flex-col items-center text-center">
-        <p
-          className="mb-4 text-sm font-medium uppercase tracking-[0.2em]"
-          style={{ color: "rgba(237,215,192,0.6)" }}
-        >
-          Venture Management Real Estate
-        </p>
         <h2
           className="mb-5 text-5xl font-light md:mb-6 md:text-7xl lg:text-8xl"
           style={{ fontFamily: "var(--font-display)", color: "var(--color-ivory)" }}

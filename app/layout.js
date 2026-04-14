@@ -5,7 +5,7 @@ import { PageTransition } from "./components/PageTransition";
 import { ChatBot } from "./components/ChatBot";
 
 export const metadata = {
-  title: "Venture Management Real Estate",
+  title: "Venture Management",
   description: "Find your home in Harare. Trusted real estate brokerage serving local and diaspora buyers across Borrowdale, Highlands, Avondale and beyond.",
 };
 
