@@ -70,18 +70,15 @@ export function Navbar1() {
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between px-[5%] py-4 lg:py-5">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span
-            className="text-lg font-medium transition-colors duration-300"
+          <img
+            src="/images/vm-logo.png"
+            alt="Venture Management"
+            className="h-10 w-auto transition-all duration-300 md:h-12"
             style={{
-              fontFamily: "var(--font-display)",
-              color: nav.isScrolled ? "var(--color-charcoal)" : "var(--color-ivory)",
-              letterSpacing: "0.02em",
+              filter: nav.isScrolled ? "none" : "brightness(0) invert(1)",
             }}
-          >
-            Venture Management
-          </span>
-        </Link>
-        {/* Desktop nav */}
+          />
+        </Link>        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map(({ href, label }) => (
             <Link
